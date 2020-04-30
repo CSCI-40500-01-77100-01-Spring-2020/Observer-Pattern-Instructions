@@ -1,8 +1,8 @@
 PDF=observer_pattern.pdf
-open:
-	gio open `git remote get-url origin`'#readme'
 html:
 	pandoc README.md -o README.html
+open:
+	gio open `git remote get-url origin`'#readme'
 preview-html: html
 	gio open README.html
 pdf:
