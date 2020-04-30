@@ -6,7 +6,7 @@ This assignment involves an implementation of the Observer pattern using the UML
 
 **Your submission must compile and run in the standard environment on our Linux lab machines (Ubuntu)**. If you work in some other environment, it is your responsibility to port your code to this environment and to make sure that it works there. **Do not wait until the last minute to compile and test on our lab machines** - past experience shows that last-minute problems often occur and lead to low project scores.
 
-Java tools should be available on our lab machines. Java is very similar to C++, it is easy to use if you know C++ (they are both statically-typed compiled languages).
+Java tools should be available on our lab machines. Java is very similar to C++, it is easy to use if you know C++ (they are both statically-typed compiled languages). You should use **Java 11** to compile this project. This is the version installed in the lab.
 
 ## Instructions
 
