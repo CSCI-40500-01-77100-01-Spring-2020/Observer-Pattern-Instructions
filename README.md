@@ -2,7 +2,7 @@
 
 ## Overview
 
-This assignment involves an implementation of the Observer pattern using the UML class diagram in the [slides]. For this project, we will be using Java; an overview of Java can be found in the lecture notes section of our Bb course. You are not allowed to use any built-in Observer types, instead, you must use the ones provided in the starter code. The starter code contains *abstract* types for `Observer`s and `Subject`s and two simplified corresponding *concrete* types. All functionality applicable to all `Observer`s, e.g., is implemented in the abstract type. The concrete classes are very simple, having only a single `int` instance (member) field (data).
+This assignment involves an implementation of the Observer pattern using the UML class diagram in the [slides]. For this project, we will be using Java; an overview of Java can be found in the lecture notes section of our Bb course. You are not allowed to use any built-in or third-party Observer types, instead, you must use the ones provided in the starter code. The starter code contains *abstract* types for `Observer`s and `Subject`s and two simplified corresponding *concrete* types. All functionality applicable to all `Observer`s, e.g., is implemented in the abstract type. The concrete classes are very simple, having only a single `int` instance (member) field (data).
 
 **Your submission must compile and run in the standard environment on our Linux lab machines (Ubuntu)**. If you work in some other environment, it is your responsibility to port your code to this environment and to make sure that it works there. **Do not wait until the last minute to compile and test on our lab machines** - past experience shows that last-minute problems often occur and lead to low project scores.
 
@@ -13,6 +13,13 @@ Java tools should be available on our lab machines. Java is very similar to C++,
 1. "Accept" the project [invitation] in GitHub Classrooms. This will create a personal private repository.
 1. Clone the repository you just created. Information on using Git and GitHub can be found in our Bb class.
 1. You are to fill-in the code marked with `TODO` in the starter code.
+    1. While you are allowed to add fields, the **only code you should write** is where the TODO comments are.
+    1. **No other parameterized constructors or methods are necessary**. You may add a default (no-arg) constructor if desired.
+    1. You are also **not allowed** to modify the parameters or return types of any of the methods in the starter code.
+	1. Points will be subtracted for any **modifications to the starter code**.
+	1. Only additions are allowed, the additions being additional fields and code within the existing methods.
+    1. You are not allowed to use any built-in or third-party Observer types.
+    1. You may import additional packages but only from the [standard Java library][api].
 1. The code you fill-in will implement the functionality of the Observer Pattern as described in the [slides] and our textbook.
 1. Once you enter the code with correct functionality, the tests will be begin to pass (they initially fail).
 1. **You are not allowed to modify the test code**. You are only allowed to edit the following files and **not add any additional files**. Submitting changes to test code will result in a **grade of 0** for this assignment:
@@ -41,3 +48,4 @@ Academic misconduct is an extremely serious offense with **severe** consequences
 
 [slides]: https://docs.google.com/presentation/d/1BmSFYmVT91mRXXgGedU8IEAylh5pcTPv_5UpqlcFqaM/edit#slide=id.p43
 [invitation]: https://classroom.github.com/a/V6jQd7gA
+[api]: https://docs.oracle.com/javase/8/docs/api
