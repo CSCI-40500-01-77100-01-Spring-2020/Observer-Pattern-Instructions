@@ -32,7 +32,7 @@ Java tools should be available on our lab machines. Java is very similar to C++,
 
 ## Project Submission
 
-On or before the due date listed on Bb, you should submit the following. Submit your project by following this step:
+On or before the due date listed on Bb, you should submit the following. Submit your project by following these steps:
 
 1. Push all materials to [GitHub Classrooms][invitation].
 
