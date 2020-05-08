@@ -1,10 +1,18 @@
-# Observer Pattern Homework Assignment
+# Observer Pattern Testing Homework Assignment
 
 ## Overview
 
-This assignment involves an implementation of the Observer pattern using the UML class diagram in the [slides]. For this project, we will be using Java; an overview of Java can be found in the lecture notes section of our Bb course. You are not allowed to use any built-in or third-party Observer types, instead, you must use the ones provided in the starter code. The starter code contains *abstract* types for `Observer`s and `Subject`s and two simplified corresponding *concrete* types. All functionality applicable to all `Observer`s, e.g., is implemented in the abstract type. The concrete classes are very simple, having only a single `int` instance (member) field (data).
+In this assignment, the starter code consists of an *incorrect* implementation of the Observer Pattern. The problem is that `Subject`s only record the *last* attached `Observer`. Thus, although multiple `Observer`s may attach to a given `Subject`, only the last one will be notified of any state changes. Despite this, the current testing code does *not* result in a failure.
 
-**Your submission must compile and run in the standard environment on our Linux lab machines (Ubuntu)**. If you work in some other environment, it is your responsibility to port your code to this environment and to make sure that it works there. **Do not wait until the last minute to compile and test on our lab machines** - past experience shows that last-minute problems often occur and lead to low project scores.
+## Goal
+
+The goal of this assignment is *not* to fix the code implementing the Observer pattern. Instead, you are to *fix the testing code*. The problem with the test code is that it is not properly testing the pattern implementation. As stated above, although the pattern implementation is incorrect, the tests pass. Your job is to *fix the tests* so that the *test fails*. **YOU ARE NOT TO FIX THE BUG IN THE PATTERN IMPLEMENTATION**. A correct assignment submission is one where the *test fails* because of the aforementioned bug regarding the capacity of `Subject`s for attaching only a single `Observer`.
+
+This assignment will get you familiar with writing test code and show that it is possible to write bugs in test code.
+
+## Notes
+
+As before, **your submission must compile and run in the standard environment on our Linux lab machines (Ubuntu)**. If you work in some other environment, it is your responsibility to port your code to this environment and to make sure that it works there. **Do not wait until the last minute to compile and test on our lab machines** - past experience shows that last-minute problems often occur and lead to low project scores.
 
 Java tools should be available on our lab machines. Java is very similar to C++, it is easy to use if you know C++ (they are both statically-typed compiled languages).
 
@@ -12,23 +20,23 @@ Java tools should be available on our lab machines. Java is very similar to C++,
 
 1. "Accept" the project [invitation] in GitHub Classrooms. This will create a personal private repository.
 1. Clone the repository you just created. Information on using Git and GitHub can be found in our Bb class.
-1. You are to fill-in the code marked with `TODO` in the starter code.
-    1. While you are allowed to add fields, the **only code you should write** is where the TODO comments are.
-    1. **No other parameterized constructors or methods are necessary**. You may add a default (no-arg) constructor if desired.
-    1. You are also **not allowed** to modify the parameters or return types of any of the methods in the starter code.
-	1. Points will be subtracted for any **modifications to the starter code**.
-	1. Only additions are allowed, the additions being additional fields and code within the existing methods.
+1. You are to *only* fix the test code in the starter code.
+    1. You are *not* allowed to change code other than the test code.
+    1. You must *only* change the code in the test methods.
+    1. No other modifications (e.g., instance field, method, and constructor additions/removals, parameter changes, return type changes) should be necessary. If you feel otherwise, contact me ASAP.
+	1. Points will be subtracted for any **modifications to the structure of the starter code**.
     1. You are not allowed to use any built-in or third-party Observer types.
-    1. You may import additional packages but only from the [standard Java library][api].
-1. The code you fill-in will implement the functionality of the Observer Pattern as described in the [slides] and our textbook.
-1. Once you enter the code with correct functionality, the tests will be begin to pass (they initially fail).
-1. **You are not allowed to modify the test code**. You are only allowed to edit the following files and **not add any additional files**. Submitting changes to test code will result in a **grade of 0** for this assignment:
-    1. `Subject.java`
-    1. `IntegerContainer.java`
-    1. `IntegerObserver.java`
-1. You may run the tests locally at any time to see if they pass. Instructions are included in the starter code.
+    1. You may import additional packages but only from the [standard Java library][api] and the [JUnit4 library][junit4api]. JUnit is a popular unit testing framework for Java.
+1. Once you enter the code with correct functionality, the tests will be begin to **fail** (they initially pass).
+1. You are only allowed to edit the files in the `tests` directory.
+1. You may run the tests locally at any time to see if they fail. Instructions are included in the starter code.
 1. **You must add comments** to your code. Code without additional comments **will receive a grade of 0**.
 1. **Get started early**. Ensure that your environment is properly working **ahead of the deadline**.
+
+## Hints
+
+1. The bug is in the `Subject` code. You should only have to alter the test code for `Subject`s and *not* `Observer`s.
+1. Once you change the test code, fix the bug in the `Subject` code to make sure that the tests pass again. But, **do not** commit the bug fix. This is just to ensure that your test fix is correct.
 
 ## Project Submission
 
@@ -47,5 +55,6 @@ The project you submit must be entirely your own work. Minor consultations with 
 Academic misconduct is an extremely serious offense with **severe** consequences. Additional details on academic integrity are available from the [Committee on Academic Misconduct](http://www.hunter.cuny.edu/studentaffairs/student-conduct/academic-integrity/cuny-policy-on-academic-integrity). I strongly recommend that you check this URL. If you have any questions about university policies or what constitutes academic misconduct in this course, please contact me immediately.
 
 [slides]: https://docs.google.com/presentation/d/1BmSFYmVT91mRXXgGedU8IEAylh5pcTPv_5UpqlcFqaM/edit#slide=id.p43
-[invitation]: https://classroom.github.com/a/V6jQd7gA
+[invitation]: https://classroom.github.com/a/8YCoUGo7
 [api]: https://docs.oracle.com/javase/8/docs/api
+[junit4api]: https://junit.org/junit4/javadoc/latest/
